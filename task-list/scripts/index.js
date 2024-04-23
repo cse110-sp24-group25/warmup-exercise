@@ -14,7 +14,6 @@ async function addJSONData() {
     }).then(data => {
       // add JSON data to HTML
 
-      
       /**
        * TO IMPLEMENT:
        * Need to add all JSON task objects to HTML. This code only adds
