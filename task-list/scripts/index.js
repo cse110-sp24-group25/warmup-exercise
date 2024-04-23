@@ -14,12 +14,13 @@ async function addJSONData() {
     }).then(data => {
       // add JSON data to HTML
 
+      
       /**
        * TO IMPLEMENT:
        * Need to add all JSON task objects to HTML. This code only adds
        * the one at index 0. So a while loop should work I think
        */
-      
+  
       newTask.insertAdjacentHTML("beforeend",
       `<div class="task">
         <p>${data.tasks[0].name}</p>
