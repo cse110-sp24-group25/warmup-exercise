@@ -5,6 +5,13 @@ function selectButton(index) {
 }
 
 function submitVote() {
+<<<<<<< HEAD
+=======
+  const existingMessageElement = document.querySelector(".message");
+  if (existingMessageElement) {
+      existingMessageElement.remove();
+  }
+>>>>>>> 926be6d (Fixed message bug)
 
   const responseElement = document.createElement("p");
   responseElement.className = "message";
@@ -34,4 +41,9 @@ function submitVote() {
   responseElement.textContent = message;
 
   document.body.appendChild(responseElement);
+<<<<<<< HEAD
 }
+=======
+
+}
+>>>>>>> 926be6d (Fixed message bug)
