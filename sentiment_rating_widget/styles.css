@@ -19,7 +19,13 @@ button {
     background-color: transparent;
 }
 button.active {
-    box-shadow: 0 0 10px #00ff00;
+    filter: drop-shadow(0 0 10px #00ff00);
+}
+button.active, button.active:hover {
+    filter: drop-shadow(0 0 20px #00ff00); /* 이제 active 상태일 때는 이 스타일이 hover 스타일을 덮어씁니다 */
+}
+button:hover {
+    filter: drop-shadow(0 0 20px #3adcee);
 }
 
 #buttons button {
@@ -34,10 +40,6 @@ button.active {
     border-radius: 20px;
     padding: 20px;
     margin: auto;
-}
-
-button:hover {
-    filter: drop-shadow(0 0 20px #D2B48C);
 }
 
 #submit {
