@@ -11,7 +11,7 @@ function selectButton(buttonIndex) {
     const button = document.querySelector(`#buttons button:nth-child(${buttonIndex})`);
     button.classList.add('active');
 
-    selectedButton = buttonIndex;
+    selectedButtonIndex = buttonIndex;
 }
 
 function submitVote() {
