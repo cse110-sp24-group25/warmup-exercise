@@ -48,4 +48,5 @@ function submitVote() {
   responseElement.textContent = message;
 
   document.body.appendChild(responseElement);
+
 }
