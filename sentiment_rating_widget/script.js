@@ -12,8 +12,7 @@ function selectButton(buttonIndex) {
     button.classList.add('active');
 
     selectedButton = buttonIndex;
-
-
+}
 
 function submitVote() {
   const existingMessageElement = document.querySelector(".message");
