@@ -34,8 +34,12 @@ button:hover {
     box-shadow: 0 0 10px #3adcee;
 }
 
-
-
 #submit {
     text-align: center;
+    font-family: Poppins, sans-serif; /* Use Poppins font */
+    font-size: 24px; /* Increase font size */
+    padding: 15px 30px; /* Increase padding */
+    box-shadow: none;
+    display: block;
+    margin: auto;
 }
