@@ -32,6 +32,16 @@ async function addJSONData() {
 
 addJSONData();
 
+function removeTask() {
+  const taskList = document.querySelector(".task-list-grid");
+  let completedTask = document.querySelector(".completed");
+  while (completedTask !== null){
+    taskList.removeChild(completedTask);
+    completedTask = document.querySelector(".completed");
+  }
+}
+
+
 
 
 
