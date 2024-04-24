@@ -1,9 +1,9 @@
 ---
-name: Task that need to be completed
-about: List of task that need to be completed
-title: ''
-labels: ''
-assignees: ''
+name: Create Images
+about: Create 5 images for the app
+title: 'Create Images'
+labels: 'uncompleted'
+assignees: 'Sonya'
 
 ---
 
