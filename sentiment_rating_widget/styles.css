@@ -31,7 +31,7 @@ button.active {
 }
 
 button:hover {
-    box-shadow: 0 0 10px #3adcee;
+    filter: drop-shadow(0 0 20px #D2B48C);
 }
 
 #submit {
