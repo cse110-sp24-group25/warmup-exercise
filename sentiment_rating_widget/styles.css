@@ -1,11 +1,13 @@
 h1 {
     text-align: center;
+    font-family: Poppins, sans-serif;
+    font-size: 50px;
 }
 
 button {
     padding: 10px 20px;
     font-size: 16px;
-    margin: 10px;
+    /* margin: 10px; */
     border: none;
     cursor: pointer;
     background-color: transparent;
@@ -14,9 +16,25 @@ button.active {
     box-shadow: 0 0 10px #00ff00;
 }
 
-#buttons {
-    text-align: center;
+#buttons button {
+    margin: 10px;
 }
+
+#buttons {
+    width: max-content;
+    height: max-content;
+    text-align: center;
+    border: 10px solid #000000;
+    border-radius: 20px;
+    padding: 20px;
+    margin: auto;
+}
+
+button:hover {
+    box-shadow: 0 0 10px #3adcee;
+}
+
+
 
 #submit {
     text-align: center;
