@@ -16,7 +16,7 @@ button.active {
     filter: drop-shadow(0 0 10px #00ff00);
 }
 button.active, button.active:hover {
-    filter: drop-shadow(0 0 20px #00ff00); /* 이제 active 상태일 때는 이 스타일이 hover 스타일을 덮어씁니다 */
+    filter: drop-shadow(0 0 20px #00ff00);
 }
 button:hover {
     filter: drop-shadow(0 0 20px #3adcee);
