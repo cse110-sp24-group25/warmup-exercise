@@ -5,6 +5,10 @@ function selectButton(index) {
 }
 
 function submitVote() {
+  const existingMessageElement = document.querySelector(".message");
+  if (existingMessageElement) {
+      existingMessageElement.remove();
+  }
 
   const responseElement = document.createElement("p");
   responseElement.className = "message";
