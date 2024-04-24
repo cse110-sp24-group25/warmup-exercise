@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.task-list-grid {
+.main-body {
   display: grid;
   grid-template-rows: auto;
   border: blue solid 4px;
