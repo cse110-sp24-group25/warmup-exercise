@@ -1,10 +1,23 @@
+h1 {
+    text-align: center;
+}
+
 button {
     padding: 10px 20px;
     font-size: 16px;
     margin: 10px;
     border: none;
     cursor: pointer;
+    background-color: transparent;
 }
 button.active {
     box-shadow: 0 0 10px #00ff00;
+}
+
+#buttons {
+    text-align: center;
+}
+
+#submit {
+    text-align: center;
 }

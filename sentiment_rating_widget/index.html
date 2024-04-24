@@ -9,13 +9,25 @@
 <body>
     <h1>Sentiment Analysis Poll</h1>
     <div id="buttons">
-        <button onclick="selectButton(1)">Button 1</button>
-        <button onclick="selectButton(2)">Button 2</button>
-        <button onclick="selectButton(3)">Button 3</button>
-        <button onclick="selectButton(4)">Button 4</button>
-        <button onclick="selectButton(5)">Button 5</button>
+        <button onclick="selectButton(1)">
+            <img src="1angry.png" alt="Button 1">
+        </button>
+        <button onclick="selectButton(2)">
+            <img src="2upset.png" alt="Button 2">
+        </button>
+        <button onclick="selectButton(3)">
+            <img src="3neutral.png" alt="Button 3">
+        </button>
+        <button onclick="selectButton(4)">
+            <img src="3neutral.png" alt="Button 4">
+        </button>
+        <button onclick="selectButton(5)">
+            <img src="5happy.png" alt="Button 5">
+        </button>
     </div>
-    <button onclick="submitVote()">Submit</button>
+    <div id="submit">
+        <button onclick="submitVote()">Submit</button>
+    </div>
 
     <script src="script.js"></script>
 </body>
