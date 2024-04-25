@@ -28,3 +28,29 @@ async function addJSONData() {
 }
 
 addJSONData();
+
+// html has two boxes, one for deadline, and one for task?
+async function addTask() {
+  // find taskList and create new task
+  const taskName = document.getElementById("task-name");
+  const taskDeadline = document.getElementById("deadline");
+  if (taskName.value == "" || taskDeadline.value == "") {
+    return;
+  }
+
+  const taskList = document.querySelector(".task-list-flex");
+  const newTask = document.createElement("div");
+  
+  newTask.setAttribute("class","task");
+  taskList.appendChild(newTask);
+  newTask.insertAdjacentHTML("beforeend",
+    `<input type="checkbox" id="toggle-btn">
+    <label for="toggle-btn">Mark as Complete</label>
+    <p>${taskName.value}</p>
+    <p>Due: ${taskDeadline.value}</p>
+    <button type="delete">Delete</button>`
+  );
+  
+  taskName.value = "";
+  taskDeadline.value = "";
+}
