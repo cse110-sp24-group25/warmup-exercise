@@ -5,6 +5,7 @@
   font-size: 50px;
   font-family: Helvetica, sans-serif;
   color: rgb(245, 31, 16);
+
 }
 
 /* Overall box to contain tasks
@@ -93,4 +94,13 @@ input[type="checkbox"] + label {
 body {
   background-image: radial-gradient(circle, 
         rgba(24, 205, 14), rgb(255, 228, 25));
+}
+
+.insert-task-manually {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: auto;
+  margin: 2vw;
+  color: #204507;
 }
