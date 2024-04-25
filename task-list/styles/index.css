@@ -1,24 +1,32 @@
-/* Editing element for the title */
+/* Editing element for the title
+ * Center aligned, 50px, Helvetica, red coloring*/
 .title {
   text-align: center;
   font-size: 50px;
   font-family: Helvetica, sans-serif;
-  color: #204507;
+  color: rgb(245, 31, 16);
 }
 
 /* Overall box to contain tasks
  * Using a flex grid to display tasks */
 .task-list-flex {
   display: flex;
-  justify-content: center;
+
+  /* Align content starting at the left and the top when it wraps 
+   * Wrap to next line when we hit the border
+   * Allow for scrolling when there's overflow */
+  justify-content: space-around;
+  align-content: flex-start;
   flex-wrap: wrap;
   overflow: auto;
 
   /* Set up for the border */
-  border: 5px solid #6aff07;
+  border: 5px solid rgb(245, 31, 16);
   border-radius: 3vw;
 
-  /* Set up sizing for task list */
+  /* Set up sizing for task list 
+   * USe view width/height so sizing is dependent on page size
+   * Margins center it */
   height: 75vh;
   width: 86vw;
   margin-left: 7vw;
@@ -32,16 +40,22 @@
 .task {
   display: inline-block;
   /* Border design */
-  border: rgb(117, 253, 90) solid 2px;
+  border: rgb(233, 242, 60) solid 3px;
   border-radius: 1vw;
 
-  /* Sizing for task box */
+  /* Sizing for task box 
+   * Define min width, as well as max width and height 
+   * Used in case inputted task text is too long
+   * Overflow is hidden and allows for scrolling
+   * Text is aligned in the center */
   min-width: 12rem;
-  max-height: 140px;
+  max-width: 15rem;
+  max-height: 200px;
   overflow: auto;
   text-align: center;
 
-  /* Margins for alignment in flex */
+  /* Margins for alignment in flex 
+   * Using view width/height for dynamic seperation as page is resized */
   margin-top: 1vh;
   margin-bottom: 1vh;
   margin-left: 1vw;
@@ -49,29 +63,33 @@
 
   /* Background gradient for tasks */
   background-image: radial-gradient(circle, 
-        rgba(24, 205, 14), rgb(255, 228, 25));
+        rgb(245, 31, 16), rgba(248, 138, 74, 0.833));
 
   /* Text coloring */
-  color: #204507;
+  color: rgb(233, 242, 60);
 }
 
-/* Formatting for text in tasks */
+/* Formatting for text in tasks 
+ * Underline and font */
 .task > p {
   text-decoration: underline;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* Edit the task once it has been marked completed */
+/* Edit the task once it has been marked completed
+ * Cross out and highlight green */
 input[type="checkbox"]:checked + label ~ p{
-  text-decoration: line-through;
+  text-decoration: line-through; 
+  background-color: green;
 }
 
-/* Trigger for selecting checkbox */
+/* Trigger for selecting checkbox
+ * Change cursor to pointer to indicate clickable */
 input[type="checkbox"] + label {
-  cursor: pointer; /* Change cursor to pointer to indicate clickable */
+  cursor: pointer;
 }
 
-/* Background gradient */
+/* Background gradient for entire page */
 body {
   background-image: radial-gradient(circle, 
         rgba(24, 205, 14), rgb(255, 228, 25));
