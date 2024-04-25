@@ -1,21 +1,78 @@
+/* Editing element for the title */
 .title {
   text-align: center;
+  font-size: 50px;
+  font-family: Helvetica, sans-serif;
+  color: #204507;
 }
 
-.task-list-grid {
-  display: grid;
-  grid-template-rows: auto;
-  border: blue solid 4px;
-  gap: 0.2rem;
-  margin: auto;
+/* Overall box to contain tasks
+ * Using a flex grid to display tasks */
+.task-list-flex {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  overflow: auto;
 
-  max-width: min(70%, 50rem);
-  min-width: 26rem;
+  /* Set up for the border */
+  border: 5px solid #6aff07;
+  border-radius: 3vw;
+
+  /* Set up sizing for task list */
+  height: 75vh;
+  width: 86vw;
+  margin-left: 7vw;
+  margin-right: 7vw;
 }
 
+/* Formatting for indivual tasks 
+ * Each should have two buttons, 
+ * one to mark as complete, the other to delete.
+ * Using inline-block to allow for borders, margins, and text editing */
 .task {
-  margin: auto;
-  border: grey solid 2px;
+  display: inline-block;
+  /* Border design */
+  border: rgb(117, 253, 90) solid 2px;
+  border-radius: 1vw;
+
+  /* Sizing for task box */
   min-width: 12rem;
+  max-height: 140px;
+  overflow: auto;
   text-align: center;
+
+  /* Margins for alignment in flex */
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  margin-left: 1vw;
+  margin-right: 1vw;
+
+  /* Background gradient for tasks */
+  background-image: radial-gradient(circle, 
+        rgba(24, 205, 14), rgb(255, 228, 25));
+
+  /* Text coloring */
+  color: #204507;
+}
+
+/* Formatting for text in tasks */
+.task > p {
+  text-decoration: underline;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Edit the task once it has been marked completed */
+input[type="checkbox"]:checked + label ~ p{
+  text-decoration: line-through;
+}
+
+/* Trigger for selecting checkbox */
+input[type="checkbox"] + label {
+  cursor: pointer; /* Change cursor to pointer to indicate clickable */
+}
+
+/* Background gradient */
+body {
+  background-image: radial-gradient(circle, 
+        rgba(24, 205, 14), rgb(255, 228, 25));
 }
