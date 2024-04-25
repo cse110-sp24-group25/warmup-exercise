@@ -26,22 +26,28 @@ function submitVote() {
 
   switch (selectedButtonIndex) {
     case 1:
-      message = 'You selected angry. Oh no!';
+      var popup = document.getElementById("myPopup2");
+      popup.classList.toggle("show");
       break;
     case 2:
-      message = 'You selected upset. Take care!';
+      var popup = document.getElementById("myPopup3");
+      popup.classList.toggle("show");
       break;
     case 3:
-      message = 'You selected neutral. Thanks for participating!';
+      var popup = document.getElementById("myPopup4");
+      popup.classList.toggle("show");
       break;
     case 4:
-      message = 'You selected happy. Hope your day gets even better!';
+      var popup = document.getElementById("myPopup5");
+      popup.classList.toggle("show");
       break;
     case 5:
-      message = 'You selected supper happy. Hope you have more days like this!';
+      var popup = document.getElementById("myPopup6");
+      popup.classList.toggle("show");
       break;
     default:
-      message = 'Please select a sentiment before submitting.';
+      var popup = document.getElementById("myPopup");
+      popup.classList.toggle("show");
       break;
   }
 
@@ -50,3 +56,5 @@ function submitVote() {
   document.body.appendChild(responseElement);
 
 }
+
+

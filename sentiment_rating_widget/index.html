@@ -28,7 +28,16 @@
         </button>
     </div>
     <div >
-        <button onclick="submitVote()" id="submit"><h3>Submit</h3></button>
+        <button class="popup" onclick="submitVote()"><h3>Submit</h3>
+            <span class="popuptext" id="myPopup">Please select a sentiment before submitting.</span>
+            <span class="popuptext" id="myPopup2">You selected angry. Oh no!</span>
+            <span class="popuptext" id="myPopup3">You selected upset. Take care!</span>
+            <span class="popuptext" id="myPopup4">You selected neutral. Thanks for participating!</span>
+            <span class="popuptext" id="myPopup5">You selected happy. Hope your day gets even better!</span>
+            <span class="popuptext" id="myPopup6">You selected supper happy. Hope you have more days like this!</span>
+
+        </button>
+       
     </div>
 
     <script src="script.js"></script>
