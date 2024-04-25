@@ -9,19 +9,19 @@
     <div class="main-body">
     <main>
       <h1 class="title">Tasks</h1>
-      <div class="task-list-grid">
-        <details class="task">
-          <summary>Task 1 name</summary>
-          <ul>
-            <li>Details of the assignment</li>
-            <hr>
-            <li>Due date</li>
-          </ul>
-          <form>
-            <input type="checkbox" id="completed" name="completed" value="Bike">
-            <label for="completed"> Task Completed</label></form>
-        </details>
+      <div class="insert-task-manually">
+        <form>
+          <label for="task-name">Task:</label><br>
+          <input type="text" id="task-name" required><br>
+          <label for="deadline">Deadline:</label><br>
+          <input type="text" id="deadline" required><br><br>
+          <button onclick="addTask()">Add Task</button>
+        </form>
       </div>
+      <div class="task-list-flex">
+        
+      </div>
+      
     </main>
   </body>
   <script src="scripts/index.js"></script>

@@ -12,6 +12,22 @@
     {
       "name": "Review Work",
       "deadline": "End of the day"
+    },
+    {
+      "name": "Extra field test",
+      "deadline": "anything",
+      "other-field": "should still print"
+    },
+    {
+      "name": "Missing deadline test",
+      "other-field": "anything"
+    },
+    {
+      "deadline": "Missing name test"
+    },
+    {
+      "name": "Empty deadline test",
+      "deadline": ""
     }
   ]
 }
