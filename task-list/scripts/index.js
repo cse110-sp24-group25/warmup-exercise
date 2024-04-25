@@ -25,11 +25,11 @@ function addJSONData() {
         taskList.appendChild(newTask);
         newTask.insertAdjacentHTML("afterbegin",
           `
-          <input type="checkbox" id="toggle-btn">
+          <input type="checkbox" id="toggle-btn" onclick="updateCompleted(this)">
           <label for="toggle-btn">Mark as Complete</label>
           <p>${task.name}</p>
           <p>Due: ${task.deadline}</p>
-          <button type="delete">Delete</button>
+          <button type="delete" onclick="deleteCompleted()">Delete</button>
           `
         );
       }
@@ -42,13 +42,24 @@ function addJSONData() {
 
 addJSONData();
 
-function removeTask() {
-  const taskList = document.querySelector(".task-list-grid");
+/**
+ * Deletes all tasks that are marked as completed from the task list
+ */
+function deleteCompleted() {
+  const taskList = document.querySelector(".task-list-flex");
   let completedTask = document.querySelector(".completed");
   while (completedTask !== null){
     taskList.removeChild(completedTask);
     completedTask = document.querySelector(".completed");
   }
+}
+
+/**
+ * Toggles the "completed" class of the parent task of the checkbox
+ * @param checkbox
+ */
+function updateCompleted(checkbox) {
+  checkbox.parentElement.classList.toggle("completed");
 }
 
 
@@ -69,13 +80,14 @@ function addTask() {
   const newTask = document.createElement("div");
   
   newTask.setAttribute("class","task");
+  newTask.classList.add("completed");
   taskList.appendChild(newTask);
   newTask.insertAdjacentHTML("beforeend",
-    `<input type="checkbox" id="toggle-btn">
+    `<input type="checkbox" id="toggle-btn" onclick="updateCompleted(this)">
     <label for="toggle-btn">Mark as Complete</label>
     <p>${taskName.value}</p>
     <p>Due: ${taskDeadline.value}</p>
-    <button type="delete">Delete</button>`
+    <button type="delete" onclick="deleteCompleted">Delete</button>`
   );
   
   taskName.value = "";
