@@ -1,3 +1,5 @@
+var taskCount = 0;
+
 /**
  * Adds JSON data to the task list
  * @Returns void
@@ -32,6 +34,9 @@ function addJSONData() {
           <button type="delete" onclick="deleteCompleted()">Delete</button>
           `
         );
+        newTask.querySelector("input").setAttribute("id", "toggle-btn-" + taskCount);
+        newTask.querySelector("label").setAttribute("for", "toggle-btn-" + taskCount);
+        taskCount++;
       }
     });
   }
@@ -89,6 +94,9 @@ function addTask() {
     <p>Due: ${taskDeadline.value}</p>
     <button type="delete" onclick="deleteCompleted">Delete</button>`
   );
+  newTask.querySelector("input").setAttribute("id", "toggle-btn-" + taskCount);
+  newTask.querySelector("label").setAttribute("for", "toggle-btn-" + taskCount);
+  taskCount++;
   
   taskName.value = "";
   taskDeadline.value = "";
