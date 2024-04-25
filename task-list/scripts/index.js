@@ -85,14 +85,13 @@ function addTask() {
   const newTask = document.createElement("div");
   
   newTask.setAttribute("class","task");
-  newTask.classList.add("completed");
   taskList.appendChild(newTask);
   newTask.insertAdjacentHTML("beforeend",
     `<input type="checkbox" id="toggle-btn" onclick="updateCompleted(this)">
     <label for="toggle-btn">Mark as Complete</label>
     <p>${taskName.value}</p>
     <p>Due: ${taskDeadline.value}</p>
-    <button type="delete" onclick="deleteCompleted">Delete</button>`
+    <button type="delete" onclick="deleteCompleted()">Delete</button>`
   );
   newTask.querySelector("input").setAttribute("id", "toggle-btn-" + taskCount);
   newTask.querySelector("label").setAttribute("for", "toggle-btn-" + taskCount);
