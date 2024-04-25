@@ -1,6 +1,3 @@
-* {
-  font-family: Helvetica, sans-serif;
-}
 /* Editing element for the title */
 .title {
   text-align: center;
@@ -60,8 +57,8 @@
 
 /* Formatting for text in tasks */
 .task > p {
-  /* text-decoration: underline; */
-  /* font-family: Georgia, 'Times New Roman', Times, serif; */
+  text-decoration: underline;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 /* Edit the task once it has been marked completed */
