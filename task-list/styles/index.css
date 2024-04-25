@@ -79,14 +79,25 @@
 
 /* Edit the task once it has been marked completed
  * Cross out and highlight green */
-input[type="checkbox"]:checked + label ~ p{
+input[type="checkbox"]:checked ~ p{
   text-decoration: line-through; 
   background-color: green;
 }
 
 /* Trigger for selecting checkbox
  * Change cursor to pointer to indicate clickable */
+ input[type="checkbox"] {
+  cursor: pointer;
+}
+
+/* Trigger for selecting checkbox text
+ * Change cursor to pointer to indicate clickable */
 input[type="checkbox"] + label {
+  cursor: pointer;
+}
+
+/* Turns cursor to a pointer when hovering over any buttons */
+button {
   cursor: pointer;
 }
 
