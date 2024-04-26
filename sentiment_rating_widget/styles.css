@@ -13,7 +13,6 @@ h3 {
 button {
     padding: 10px 20px;
     font-size: 16px;
-    /* margin: 10px; */
     border: none;
     cursor: pointer;
     background-color: transparent;
@@ -59,4 +58,39 @@ button:hover {
     padding: 10px;
     border-radius: 5px;
     display: inline-block;
+}
+
+#rotate-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: none;
+}
+
+@media screen and (max-width: 550px) {
+    h1 {
+        font-size: 25px;
+    }
+    #buttons img {
+        width: 100%;
+    }
+    #buttons button{
+        width: 40%;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-height: 550px) {
+    #rotate-message {
+        display: block;
+    }
+    #buttons,h1,h3 {
+        display:none;
+    }
 }
