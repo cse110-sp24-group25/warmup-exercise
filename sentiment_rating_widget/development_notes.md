@@ -14,9 +14,11 @@ In this file, we have outlined our development process from start to finish. We 
 - Indicator for the user's selection
 - Have the button trigger a message depending on the user's selection. For example, celebratory for happy, or ‘hope you feel better’ for sad
 - Add functions in JavaScript for animation
+  
 
 ### Development Process:
 - Before we started coding, we developed diagrams show what we wanted our user interface to look like. We used tools in Figma to create this initial diagram
+  ![image](./Figma.png)
 - Started off with basic HTML code containing the title message and clickable buttons
 - Generated images for the face icons using AI
 - Incorporated CSS to style the text and to add colors, borders and a shadow around the icons
