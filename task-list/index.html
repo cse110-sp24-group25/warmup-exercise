@@ -7,25 +7,33 @@
   </head>
   <body>
     <main>
+      <!-- Create header for title -->
       <h1 class="title">Tasks</h1>
       <div class="insert-task-manually">
+        <!-- Input for manually inputting new task -->
         <form>
           <label for="task-name">Task:</label><br>
+          <!-- User inputs the task name in this text -->
           <input type="text" id="task-name" required><br>
           <label for="deadline">Deadline:</label><br>
+          <!-- User inputs the due date in this text -->
           <input type="text" id="deadline" required><br><br>
           <div class="add-task-btn">
+            <!-- Button for adding the tasks -->
             <button type = 'add' onclick="addTask()">Add Task</button>
           </div>
         </form>
       </div>
+      <!-- Initiate div to contain the task lists -->
       <div class="task-list-flex">
         
       </div>
       <div class="delete-task-btn">
+        <!-- Button for deleting the tasks -->
         <button type = 'delete' onclick="deleteCompleted()">Delete Selected</button>
       </div>
     </main>
   </body>
+  <!-- Read in jason file -->
   <script src="scripts/index.js"></script>
 </html>
