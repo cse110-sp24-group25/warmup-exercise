@@ -1,37 +1,48 @@
+/* Main Title Header */
 h1 {
+    /* Center the title, change the font, set the size */
     text-align: center;
     font-family: Poppins, sans-serif;
     font-size: 50px;
 }
 
+/* User Prompt */
 h3 {
+    /* Center the font, change the font, set the size */
     text-align: center;
     font-family: Poppins, sans-serif;
     font-size: 25px;
 }
 
+/* All buttons */
 button {
+    /* Set padding, size, and look of all buttons */
     padding: 10px 20px;
     font-size: 16px;
     border: none;
     cursor: pointer;
     background-color: transparent;
 }
+
+/* When clicking on buttons */
 button.active {
+    /* Green shadow outline */
     filter: drop-shadow(0 0 10px #00ff00);
 }
+/* When button is clicked */
 button.active, button.active:hover {
+    /* Hold green shadow outline */
     filter: drop-shadow(0 0 20px #00ff00);
 }
+/* When hovering on buttons */
 button:hover {
+    /* Blue shadow outline */
     filter: drop-shadow(0 0 20px #3adcee);
 }
 
-#buttons button {
-    margin: 10px;
-}
-
+/* 5 Emoji Buttons */
 #buttons {
+    /* Black border around buttons */
     text-align: center;
     border: 10px solid #000000;
     border-radius: 20px;
@@ -39,28 +50,21 @@ button:hover {
     margin: auto;
 }
 
+/* Submit button */
 #submit {
+    /* Design submit button */
     text-align: center;
-    font-family: Poppins, sans-serif; /* Use Poppins font */
-    font-size: 24px; /* Increase font size */
-    padding: 15px 30px; /* Increase padding */
+    font-family: Poppins, sans-serif;
+    font-size: 24px;
+    padding: 15px 30px;
     box-shadow: none;
     display: block;
     margin: auto;
 }
 
-.message {
-    text-align: center;
-    font-size: 24px;
-    margin-top: 20px;
-    font-family: Poppins, sans-serif;
-    color: #333333;
-    padding: 10px;
-    border-radius: 5px;
-    display: inline-block;
-}
-
+/* Rotate message */
 #rotate-message {
+    /* Desgin rotate error message */
     position: fixed;
     top: 50%;
     left: 50%;
@@ -74,22 +78,29 @@ button:hover {
     display: none;
 }
 
+/* Changes when using small phone screen */
 @media screen and (max-width: 550px) {
+    /* Shrink title */
     h1 {
         font-size: 25px;
     }
+    /* Emoji image size */
     #buttons img {
         width: 100%;
     }
+    /* Shrink button size */
     #buttons button{
         width: 40%;
     }
 }
 
+/* User message when user turns phone landscape */
 @media screen and (orientation: landscape) and (max-height: 550px) {
+    /* Rotate message appear */
     #rotate-message {
         display: block;
     }
+    /* Headers and buttons disappear */
     #buttons,h1,h3 {
         display:none;
     }
