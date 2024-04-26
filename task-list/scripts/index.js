@@ -31,7 +31,6 @@ function addJSONData() {
           <label for="toggle-btn">Mark as Complete</label>
           <p>${task.name}</p>
           <p>Due: ${task.deadline}</p>
-          <button type="delete" onclick="deleteCompleted()">Delete</button>
           `
         );
         newTask.querySelector("input").setAttribute("id", "toggle-btn-" + taskCount);
@@ -91,7 +90,7 @@ function addTask() {
     <label for="toggle-btn">Mark as Complete</label>
     <p>${taskName.value}</p>
     <p>Due: ${taskDeadline.value}</p>
-    <button type="delete" onclick="deleteCompleted()">Delete</button>`
+    `
   );
   newTask.querySelector("input").setAttribute("id", "toggle-btn-" + taskCount);
   newTask.querySelector("label").setAttribute("for", "toggle-btn-" + taskCount);

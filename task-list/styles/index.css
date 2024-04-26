@@ -1,9 +1,11 @@
+* {
+  font-family: Helvetica, sans-serif;
+}
 /* Editing element for the title
  * Center aligned, 50px, Helvetica, red coloring*/
 .title {
   text-align: center;
   font-size: 50px;
-  font-family: Helvetica, sans-serif;
   color: rgb(245, 31, 16);
 
 }
@@ -28,10 +30,10 @@
   /* Set up sizing for task list 
    * USe view width/height so sizing is dependent on page size
    * Margins center it */
-  height: 75vh;
+  min-height: 22vh;
   width: 86vw;
-  margin-left: 7vw;
-  margin-right: 7vw;
+
+  margin: auto;
 }
 
 /* Formatting for indivual tasks 
@@ -61,20 +63,22 @@
   margin-bottom: 1vh;
   margin-left: 1vw;
   margin-right: 1vw;
+  
 
   /* Background gradient for tasks */
   background-image: radial-gradient(circle, 
         rgb(245, 31, 16), rgba(248, 138, 74, 0.833));
 
   /* Text coloring */
-  color: rgb(233, 242, 60);
+  /* color: rgb(233, 242, 60); */
+  color: rgb(255, 255, 255)
 }
 
 /* Formatting for text in tasks 
  * Underline and font */
-.task > p {
-  text-decoration: underline;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+.task {
+  padding: 0.5rem;
+  font-size: 18px;
 }
 
 /* Edit the task once it has been marked completed
@@ -86,7 +90,7 @@ input[type="checkbox"]:checked ~ p{
 
 /* Trigger for selecting checkbox
  * Change cursor to pointer to indicate clickable */
- input[type="checkbox"] {
+input[type="checkbox"] {
   cursor: pointer;
 }
 
@@ -104,7 +108,11 @@ button {
 /* Background gradient for entire page */
 body {
   background-image: radial-gradient(circle, 
-        rgba(24, 205, 14), rgb(255, 228, 25));
+  rgba(24, 205, 14), rgb(255, 228, 25));
+}
+
+form {
+  font-size: 20px;
 }
 
 .insert-task-manually {
@@ -114,4 +122,21 @@ body {
   overflow: auto;
   margin: 2vw;
   color: #204507;
+}
+
+.add-task-btn {
+  text-align: center;
+}
+
+.add-task-btn > button {
+  font-size: 18px;
+}
+
+.delete-task-btn {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.delete-task-btn > button {
+  font-size: 18px;
 }
