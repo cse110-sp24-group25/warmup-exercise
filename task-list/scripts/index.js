@@ -7,9 +7,6 @@ var taskCount = 0;
 function addJSONData() {
   // find taskList and create new task
   const taskList = document.querySelector(".task-list-flex");
-  // const newTask = document.createElement("div");
-  // newTask.setAttribute("class", "task");
-  // taskList.appendChild(newTask);
   // fetch JSON data
   fetch("../data/tasks.json").then((ret) => {
     return ret.json();
@@ -33,6 +30,7 @@ function addJSONData() {
           <p>Due: ${task.deadline}</p>
           `
         );
+        // Uniquely identify tasks
         newTask.querySelector("input").setAttribute("id", "toggle-btn-" + taskCount);
         newTask.querySelector("label").setAttribute("for", "toggle-btn-" + taskCount);
         taskCount++;
@@ -66,11 +64,8 @@ function updateCompleted(checkbox) {
   checkbox.parentElement.classList.toggle("completed");
 }
 
-
-// html has two boxes, one for deadline, and one for task?
 /**
- * 
- * @returns 
+ * Adds task manually to HTML from input text boxes
  */
 function addTask() {
   // find taskList and create new task
@@ -82,7 +77,8 @@ function addTask() {
 
   const taskList = document.querySelector(".task-list-flex");
   const newTask = document.createElement("div");
-  
+
+  // insert HTML
   newTask.setAttribute("class","task");
   taskList.appendChild(newTask);
   newTask.insertAdjacentHTML("beforeend",
