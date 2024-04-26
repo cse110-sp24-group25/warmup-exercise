@@ -1,38 +1,55 @@
+<!-- This file contains the html for the Sentiment Analysis Widget -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS File -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Poppins font-family -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins">
+    <!-- Webpage Title -->
     <title>Sentiment Analysis Poll</title>
 </head>
 <body>
     <h1>Sentiment Analysis Poll</h1>
+    <!-- User Prompt -->
     <h3>How are you feeling today?</h3>
     <div id="buttons">
+        <!-- 1st Angry button  -->
         <button onclick="selectButton(1)">
-            <img src="1angry.png" alt="Button 1">
+            <img src="1angry.png" alt="Angry Button 1">
         </button>
+
+        <!-- 2nd Upset button -->
         <button onclick="selectButton(2)">
-            <img src="2upset.png" alt="Button 2">
+            <img src="2upset.png" alt="Upset Button 2">
         </button>
+
+        <!-- 3rd Neutral button -->
         <button onclick="selectButton(3)">
-            <img src="3neutral.png" alt="Button 3">
+            <img src="3neutral.png" alt="Neutral Button 3">
         </button>
+
+        <!-- 4th Happy button -->
         <button onclick="selectButton(4)">
-            <img src="4happy.png" alt="Button 4">
+            <img src="4happy.png" alt="Happy Button 4">
         </button>
+
+        <!-- 5th Overjoyed button -->
         <button onclick="selectButton(5)">
-            <img src="5overjoyed.png" alt="Button 5">
+            <img src="5overjoyed.png" alt="Overjoyed Button 5">
         </button>
     </div>
     <div >
+        <!-- Submit button -->
         <button onclick="submitVote()" id="submit"><h3>Submit</h3></button>
     </div>
 
+    <!-- Landscape message -->
     <div id="rotate-message">Please rotate your device back to portrait mode.</div>
 
+    <!-- Javascript File -->
     <script src="script.js"></script>
 </body>
 </html>
